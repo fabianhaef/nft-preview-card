@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
 :root {
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
@@ -9,6 +11,148 @@
 }
 
 
+*, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
 .main-card {
   background-color: var(--card-bg);
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 15px;
+  position: relative;
+  max-width: 350px;
+}
+
+.nft {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  height: 100%;
+}
+
+.image-div {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  top: 24;
+  bottom: 0;
+  left: 24;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(0, 255, 247, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: opacity 0.5s ease;
+
+}
+
+.image-div:hover .overlay {
+  opacity: 1;
+}
+
+.card-title {
+  color: var(--white);
+  font-size: 22px;
+  padding: 24px 0 20px 0;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.card-title:hover {
+  color: var(--cyan);
+}
+
+.card-subtitle {
+  color: var(--soft-blue);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.price-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-div > span {
+  display: flex;
+  align-items: center;
+}
+
+.eth-price {
+  color: var(--cyan);
+  font-size: 16px;
+} 
+
+.eth-price svg {
+  margin-right: 8px;
+}
+
+.days-left{
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.days-left svg {
+  margin-right: 8px;
+}
+
+
+.creator-div {
+  display: flex;
+  align-items: center;
+}
+
+.creator-div img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.creation {
+  font-size: 16px;
+  color: var(--soft-blue);
+}
+
+.creator {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.line {
+  width: 100%;
+  border: 1px solid var(--line);
+  margin: 24px 0;
+}
+
+.creator:hover {
+  color: var(--cyan);
 }
